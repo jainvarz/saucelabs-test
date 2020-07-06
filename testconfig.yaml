@@ -1,0 +1,57 @@
+---
+testFramework: espresso
+# Path to the app's .apk
+app: ./app/build/outputs/apk/inQa/debug/app-in-qa-debug.apk
+
+# Path to the test runner app's .apk
+test: /app/build/outputs/apk/inDev/debug/app-in-dev-debug.apk
+
+# Path where XML test reports will be saved.
+xmlFolder: ./reports
+
+# Define a list of devices on which the tests should be executed.
+devices:
+  # Device 1 example: minimal configuration.
+  # Only specify a DC (either EU or US).
+  - datacenter: US
+    platformVersion: 8
+    phoneOnly: true
+    testName: Atlas_Android_Tests
+    #clearPackageData: true
+    envs:
+      - key: class
+        value: co.tala.integrationtest.tests.SignUpTest
+
+  - datacenter: US
+    platformVersion: 8.1
+    phoneOnly: true
+    testName: Atlas_Android_Tests_8_1
+    #clearPackageData: true
+    envs:
+      - key: class
+        value: co.tala.integrationtest.tests.SignUpTest
+
+
+  - datacenter: US
+    platformVersion: 10
+    phoneOnly: true
+    testName: Atlas_Android_Tests_10_0
+    #clearPackageData: true
+    envs:
+      - key: class
+        value: co.tala.integrationtest.tests.SignUpTest
+
+
+    #  - datacenter: US
+    #    platformVersion: 8.1
+    #    phoneOnly: true
+    #    testName: SampleEspressoUS-DC_8_1
+    #
+    #    envs:
+    #      - key: class
+    #        value: com.learn.firstandroidapp.FirstKaspressoTest
+
+    # Provide a list of test optons to esspresso.
+    # The key-value pairs supported by espresso are documented here: https://developer.android.com/studio/test/command-line#AMOptionsSyntax
+    # In the example below the test would execute all test methods defined in the class com.example.android.TestClassA and
+    # the test method 'methodName' defined in com.example.android.TestClassB
