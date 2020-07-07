@@ -1,10 +1,10 @@
 ---
 testFramework: espresso
 # Path to the app's .apk
-app: ./app/build/outputs/apk/inQa/debug/app-in-qa-debug.apk
+app: ./outputs/apk/inQa/debug/app-in-qa-debug.apk
 
 # Path to the test runner app's .apk
-test: /app/build/outputs/apk/inDev/debug/app-in-dev-debug.apk
+test: ./outputs/apk/androidTest/inQa/debug/app-in-qa-debug-androidTest.apk
 
 # Path where XML test reports will be saved.
 xmlFolder: ./reports
@@ -16,26 +16,7 @@ devices:
   - datacenter: US
     platformVersion: 8
     phoneOnly: true
-    testName: Atlas_Android_Tests
-    #clearPackageData: true
-    envs:
-      - key: class
-        value: co.tala.integrationtest.tests.SignUpTest
-
-  - datacenter: US
-    platformVersion: 8.1
-    phoneOnly: true
-    testName: Atlas_Android_Tests_8_1
-    #clearPackageData: true
-    envs:
-      - key: class
-        value: co.tala.integrationtest.tests.SignUpTest
-
-
-  - datacenter: US
-    platformVersion: 10
-    phoneOnly: true
-    testName: Atlas_Android_Tests_10_0
+    testName: Atlas_Android_Tests_JENKINS
     #clearPackageData: true
     envs:
       - key: class

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "co.talaqa",
+  "variantName": "inQaDebug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 1500,
+      "versionName": "1500",
+      "enabled": true,
+      "outputFile": "app-in-qa-debug.apk"
+    }
+  ]
+}
